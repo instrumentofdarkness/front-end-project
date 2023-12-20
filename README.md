@@ -7,7 +7,7 @@ The front end project uses React with TypeScript and Redux. Completing all requi
 1. Step 1: yarn
 2. Step 2: yarn start
 
-### Logic Requirements (8 points)
+**Logic Requirements (8 points)**
 
 1. Fetch data from this API: `https://api.escuelajs.co/api/v1/products`
 2. The user can search product by name
@@ -18,13 +18,13 @@ The front end project uses React with TypeScript and Redux. Completing all requi
 7. Have a Loading page while fetching data
 8. Deploy the project
 
-### Styling Requirements (4 points)
+**Styling Requirements (4 points)**
 
 1. Font: font-family: 'Nunito', sans-serif
 2. Navbar and Footer
 3. When the user add an product to Favorite page, you should show a message, for example: A product(or product name) just added to the favorite page
 
-### Code style Requirements (6 points)
+**Code style Requirements (6 points)**
 
 1. Naming convention
 2. Clear file structure
@@ -33,7 +33,7 @@ The front end project uses React with TypeScript and Redux. Completing all requi
 5. Format code (Prettier - Code formatter)
 6. Separate import from your own file and the import from the package
 
-### Extra requirements (2 points)
+**Extra requirements (2 points)**
 
 ONLY DO THIS PART WHEN YOU HAVE COMPLETED THE REQUIREMENTS PART
 
