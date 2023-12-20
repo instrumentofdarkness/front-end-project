@@ -9,10 +9,10 @@ The front end project uses React with TypeScript and Redux. Completing all requi
 
 **Logic Requirements (8 points)**
 
-1. Fetch data from this API: `https://api.escuelajs.co/api/v1/products`
-2. The user can search product by name
-3. Get the product detail by this API: `https://api.escuelajs.co/api/v1/products/name`
-4. When the user click to product image or a button it should show product detail
+- [] Fetch data from this API: `https://api.escuelajs.co/api/v1/products`
+- [] The user can search product by name
+- [] Get the product detail by this API: `https://api.escuelajs.co/api/v1/products/name`
+- [] When the user click to product image or a button it should show product detail
 5. The user can add product to Favorite page
 6. When the user add a product to Favorite the favorite icon should change the color.
 7. Have a Loading page while fetching data
