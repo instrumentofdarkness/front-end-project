@@ -7,6 +7,7 @@ import NavBar from "./components/NavBar";
 import ProductsPage from "./pages/ProductsPage";
 import FavouritesPage from "./pages/FavProductsPage";
 import HomePage from "./pages/HomePage";
+import { url } from "./types/type";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
