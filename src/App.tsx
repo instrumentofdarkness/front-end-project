@@ -7,28 +7,29 @@ import NavBar from "./components/NavBar";
 import ProductsPage from "./pages/ProductsPage";
 import FavouritesPage from "./pages/FavProductsPage";
 import HomePage from "./pages/HomePage";
-import { url } from "./types/type";
+import {Product} from "./types/type"
+
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
-  const [products, setProducts] = useState([]);
+  const [products, setProducts] = useState<Product[]>([]);
   const [userInput, setUserInput] = useState("");
-  const [favProducts, setFavProducts] = useState([]);
-  let productsUrl = `https://api.escuelajs.co/api/v1/products`;
+  const [favProducts, setFavProducts] = useState<Product[]>([]);
+  let productsUrl = "https://api.escuelajs.co/api/v1/products";
 
-  function getProducts(url) {
+  function getProducts() {
     axios
-      .get(url)
+      .get(productsUrl)
       .then((response) => response.data)
       .then((products) => {
         setIsLoading(false);
-        setProducts(products.name);
+        setProducts(products);
       })
       .catch((error) => console.log(error));
   }
   useEffect(() => {
-    getProducts(productsUrl);
-  }, [productsUrl]);
+    getProducts();
+  }, []);
 
   if (isLoading) {
     return <div>Loading...</div>;
@@ -46,6 +47,7 @@ function App() {
                 setUserInput={setUserInput}
                 setFavProducts={setFavProducts}
                 favProducts={favProducts}
+                
               />
             }
           />

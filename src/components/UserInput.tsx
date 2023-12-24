@@ -1,16 +1,18 @@
-import React from 'react'
+import React from "react";
 
-export default function UserInput({
-    setUserInput}) {
-        function handleSearch(event) {
-            event.preventDefault()
-            setUserInput(event.target.value)
-        }
+type UserInputProp = {
+  setUserInput: React.Dispatch<React.SetStateAction<string>>;
+};
 
+export default function UserInput({ setUserInput }: UserInputProp) {
+  function handleSearch(event: React.ChangeEvent<HTMLInputElement>) {
+    event.preventDefault();
+    setUserInput(event.target.value);
+  }
 
   return (
     <div>
-        <input type="text" placeholder="Search" onChange={handleSearch} />
+      <input type="text" placeholder="Search" onChange={handleSearch} />
     </div>
-  )
+  );
 }

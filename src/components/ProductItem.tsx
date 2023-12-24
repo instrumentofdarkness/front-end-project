@@ -1,14 +1,17 @@
 import React from 'react'
+import { Product } from '../types/type'
 
-export default function ProductItem({products, setFavProducts, favProducts}) {
+type ProductProp = {favProducts: Product[], setFavProducts: React.Dispatch<React.SetStateAction<Product[]>>, product: Product}
 
-    function handleFavClick() {setFavProducts([...favProducts, products])}
+export default function ProductItem({product, setFavProducts, favProducts} : ProductProp) {
+
+    function handleFavClick() {setFavProducts([...favProducts, product])}
   return (
     <div>
-        <h3>{products.name}</h3>
-        <h4>{products.price}</h4>
+        <h3>{product.title}</h3>
+        <h4>{product.price}</h4>
         <button onClick={handleFavClick}>Add to favourites</button>
-        <img src={products.image} alt={products.name} />
+        <img src={product.image} alt={product.title} />
         
     </div>
   )

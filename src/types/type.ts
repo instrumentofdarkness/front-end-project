@@ -1,6 +1,6 @@
-export type favProducts = {
+export type Product = {
     id: number;
-    name: string;
+    title: string;
     price: number;
     image: string;
     description: string;
@@ -10,5 +10,3 @@ export type favProducts = {
     countInStock: number;
     isFav: boolean;
     };
-
-export type url = string;

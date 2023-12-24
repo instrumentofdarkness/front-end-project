@@ -1,11 +1,14 @@
 import React from "react";
+import { Product } from "../types/type";
 
-export default function FavProductsPage({ favProducts }) {
+type FavProductsProp = {favProducts: Product []}
+
+export default function FavProductsPage({ favProducts } : FavProductsProp) {
   return (
     <div>
       <ul>
         {favProducts.map((product) => {
-          return <li key={product.id}>{product.name}</li>;
+          return <li key={product.id}>{product.title}</li>;
         })}
       </ul>
     </div>
