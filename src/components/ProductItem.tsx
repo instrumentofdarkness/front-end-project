@@ -18,7 +18,7 @@ export default function ProductItem({
   return (
     <div>
       <h3>{product.title}</h3>
-      <img src={product.images} alt={product.title} />
+      <img src={product.image} alt={product.title} />
       <h4>{product.price}</h4>
       <button onClick={handleFavClick}>Add to favourites</button>
       
