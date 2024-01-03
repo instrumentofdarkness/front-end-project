@@ -1,9 +1,9 @@
 import React from "react";
 import { Product } from "../types/type";
 
-type FavProductsProp = {favProducts: Product []}
+type FavProductsProp = { favProducts: Product[] };
 
-export default function FavProductsPage({ favProducts } : FavProductsProp) {
+export default function FavProductsPage({ favProducts }: FavProductsProp) {
   return (
     <div>
       <ul>

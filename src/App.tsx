@@ -7,8 +7,7 @@ import NavBar from "./components/NavBar";
 import ProductsPage from "./pages/ProductsPage";
 import FavouritesPage from "./pages/FavProductsPage";
 import HomePage from "./pages/HomePage";
-import {Product} from "./types/type"
-
+import { Product } from "./types/type";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -47,7 +46,6 @@ function App() {
                 setUserInput={setUserInput}
                 setFavProducts={setFavProducts}
                 favProducts={favProducts}
-                
               />
             }
           />
