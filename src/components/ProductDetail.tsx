@@ -8,7 +8,7 @@ export default function ProductDetail() {
 
   const [productDetail, setProductDetail] = useState({} as Product);
 
-  const url: string = "https://api.escuelajs.co/api/v1/products/name";
+  const url: string = "https://api.escuelajs.co/api/v1/products/title";
 
   useEffect(() => {
     async function getProduct() {
