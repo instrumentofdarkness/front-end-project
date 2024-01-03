@@ -1,5 +1,6 @@
 import React from "react";
 import { Product } from "../types/type";
+import { Link } from "react-router-dom";
 
 type ProductProp = {
   favProducts: Product[];
@@ -18,9 +19,16 @@ export default function ProductItem({
   return (
     <div>
       <h3>{product.title}</h3>
-      <img src={product.image} alt={product.title} />
+      {/* <img src={product.images[0]} alt={product.title} height="50px" width="50px" /> */}
+
+      {product.images.slice(0,2).map ((image) => {
+        return (
+          <img src={image} alt={product.title} height="50px" width="50px"/>
+        )
+      })}
       <h4>{product.price}</h4>
       <button onClick={handleFavClick}>Add to favourites</button>
+      <button><Link to={`/products/${product.title}`}>more detail</Link></button>
       
     </div>
   );

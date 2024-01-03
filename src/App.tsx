@@ -8,6 +8,7 @@ import ProductsPage from "./pages/ProductsPage";
 import FavouritesPage from "./pages/FavProductsPage";
 import HomePage from "./pages/HomePage";
 import { Product } from "./types/type";
+import ProductDetail from "./components/ProductDetail";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -29,7 +30,7 @@ function App() {
   useEffect(() => {
     getProducts();
   }, []);
-
+// search logic here
   if (isLoading) {
     return <div>Loading...</div>;
   } else {
@@ -47,8 +48,10 @@ function App() {
                 setFavProducts={setFavProducts}
                 favProducts={favProducts}
               />
+        
             }
           />
+          <Route path="/products/:title" element={< ProductDetail/>} />
           <Route
             path="favourites"
             element={<FavouritesPage favProducts={favProducts} />}

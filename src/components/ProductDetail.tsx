@@ -4,12 +4,12 @@ import { useParams } from "react-router-dom";
 import { Product } from "../types/type";
 
 export default function ProductDetail() {
-  useParams();
-
+  const productTitle = useParams();
+console.log (productTitle)
   const [productDetail, setProductDetail] = useState({} as Product);
 
-  const url: string = "https://api.escuelajs.co/api/v1/products/title";
-
+  const url: string = `https://api.escuelajs.co/api/v1/products/${productTitle.title}`;
+console.log (url)
   useEffect(() => {
     async function getProduct() {
       const response = await fetch(url);
